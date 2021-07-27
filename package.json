@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "product-feed-exercise",
+  "version": "1.0.0",
+  "description": "Product Feed Exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js"
+  },
+  "author": "Chukwuemeka Ajah",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^2.0.10"
+  },
+  "devDependencies": {
+    "mocha": "^9.0.2"
+  }
+}
