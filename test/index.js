@@ -128,6 +128,12 @@ describe('Testing of individual data row parsing and validation', function(){
 
 
 describe('Testing of chunk processing', function(){
+
+    this.afterAll(function(done){
+        fs.unlinkSync(`${process.cwd()}${path.sep}test_processed.csv`)
+        done()
+    });
+
     it("Should return total rows and removed rows from read data chunk", function(){
         const chunkData = `{"id":"70395","title":"Rustic Plastic Bike","description":"Pizza","link":"https://else.name","image_link":"http://lorempixel.com/640/480","brand":"Skiles Fahey","price":"50.00","availability":"in stock"}\n{"id":"7395","title":"Rustic Plastic Bike","description":"Pizza","link":"https://else.name","image_link":"http://lorempixel.com/640/480","brand":"Skiles Fahey","price":"590.00","availability":"out of stock"}\n{"id":"70395","title":"Rustic Plastic Bike","description":"Pizza","link":"https://else.name","image_link":"http://lorempixel.com/640/480","brand":"Skiles Fahey","price":"590.00","availability":"in stock"}\n{"id":"703395","title":"Rustic Plastic Bike","description":"Pizza","link":"https://else.name","image_link":"http://lorempixel.com/640/480","brand":"Skiles Fahey","price":"190.00","availability":"in stock"}`
     
